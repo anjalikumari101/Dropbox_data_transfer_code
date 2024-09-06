@@ -1,0 +1,12 @@
+[Unit]
+Description= Start Frame Capture Program
+After=network.target
+
+[Service]
+Type=forking
+User=dpc-narmada
+ExecStart=/bin/sh /home/dpc-narmada/INSIGHTZZ/DROPBOX/dropbox_service.sh
+TimeoutStartSec=0
+Restart=always
+[Install]
+WantedBy=multi-user.target
